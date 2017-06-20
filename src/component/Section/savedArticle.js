@@ -9,14 +9,14 @@ export default class SavedArticle extends Component {
 		return savedArticles.map((item, key) => {
 				let header = (
 						<div>
-							{item.title}
+							{item.headline.main}
 							<Button className="pull-right">Remove</Button>
 						</div>
 					)
 					
 				return	<div key={key} >
 					    <Panel header={header}>
-					      {item.time}
+					      {item.lead_paragraph}
 					      
 					    </Panel>
 					</div>

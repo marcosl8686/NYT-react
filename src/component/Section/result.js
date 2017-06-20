@@ -10,8 +10,8 @@ export default class Result extends Component {
 		//return this.state.articles.map(item => {
 		return articles.map(item => {
 			return (
-					<Panel>
-						{item.title}
+					<Panel key={item._id}>
+						{item.headline.main}
 						<Button className="pull-right" onClick={()=> this.props.saveArticle(item)}>Save</Button>
 					</Panel>
 				);
